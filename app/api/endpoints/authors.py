@@ -92,7 +92,7 @@ def update_author(
     author_id: int,
     db: Session = Depends(get_db)
     ):
-    """Update author"""
+    """Delete author"""
     author = db.query(models.Author).filter(models.Author.id == author_id).first()
     if not author:
         raise HTTPException(

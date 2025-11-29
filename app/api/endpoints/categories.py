@@ -91,7 +91,7 @@ def update_category(
     category_id: int,
     db: Session = Depends(get_db)
     ):
-    """Update category"""
+    """Delete category"""
     category = db.query(models.Category).filter(models.Category.id == category_id).first()
     if not category:
         raise HTTPException(
